@@ -9,7 +9,7 @@ state that this uses fmod.
 ## installation
 move "purrgatory.scr" into "C:\Windows", and move "purrgatory.wav" into "C:\Windows" as well.
 (i promise this isnt a virus, this is just how screensavers work)
-then, you go to the screensaver settings and switch to the purrgatory screensaver. itll automatically open a bunch, just close it each time
+then, you go to the screensaver settings and switch to the purrgatory screensaver like usual.
 
 ## usage
 you can exit the screesaver by pressing any key on your keyboard, but f1 opens up the info panel and escape closes

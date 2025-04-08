@@ -75,6 +75,8 @@ applies_to=self
 */
 window_resize_buffer(480, 360, true, 0)
 
+if (parameter_string(1) != "/s") { game_end(); exit }
+
 if (not file_exists("C:\Windows\purrgatory.wav") or false) {
     show_message('Place the file "purrgatory.wav" in "C:\Windows"!')
     game_end()
