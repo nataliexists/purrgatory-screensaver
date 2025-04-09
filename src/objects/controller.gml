@@ -67,6 +67,27 @@ applies_to=self
 */
 if (keyboard_lastkey != vk_f1)
     game_end()
+#define Mouse_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+game_end()
+#define Mouse_1
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+game_end()
+#define Mouse_2
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+game_end()
 #define Other_2
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -75,7 +96,10 @@ applies_to=self
 */
 window_resize_buffer(480, 360, true, 0)
 
-if (parameter_string(1) != "/s") { game_end(); exit }
+if (parameter_count() == 0) { game_end(); exit }
+if (string_starts_with(parameter_string(1), "/c") or
+    string_starts_with(parameter_string(1), "/C"))
+{ game_end(); exit }
 
 if (not file_exists("C:\Windows\purrgatory.wav") or false) {
     show_message('Place the file "purrgatory.wav" in "C:\Windows"!')
@@ -193,5 +217,5 @@ shader_pixel_reset()
 
 draw_set_font(font0)
 draw_set_color(c_black)
-//draw_text(0, 0, string(dt))
+//draw_text(0, 0, parameter_string(1))
 draw_reset()
